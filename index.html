@@ -93,8 +93,10 @@
   .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:20px;margin-top:70px;}
   .card{
     background:var(--white);border:1px solid var(--hairline);border-radius:18px;
-    padding:40px 34px;transition:transform .25s ease,box-shadow .25s ease;
+    overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;
   }
+  .card > img{width:100%;aspect-ratio:16/6;object-fit:cover;}
+  .card .card-body{padding:34px 34px 40px;}
   .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
   .card h3{margin-bottom:6px;}
   .card .tag{font-size:14px;color:var(--sub);margin-bottom:22px;display:block;}
@@ -280,6 +282,8 @@
     </div>
     <div class="card-grid reveal">
       <div class="card">
+        <img src="https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Courier loading parcels for delivery">
+        <div class="card-body">
         <h3>Amazon growth</h3>
         <span class="tag">1P &amp; 3P · scale profitably</span>
         <ul>
@@ -290,8 +294,11 @@
         </ul>
         <p class="takeaway">Built to increase revenue, not just traffic.</p>
         <a class="cardlink" href="#contact">Free growth audit &rsaquo;</a>
+        </div>
       </div>
       <div class="card">
+        <img src="https://images.pexels.com/photos/262353/pexels-photo-262353.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Container ship crossing the ocean">
+        <div class="card-body">
         <h3>Marketplace expansion</h3>
         <span class="tag">Grow beyond Amazon</span>
         <ul>
@@ -302,8 +309,11 @@
         </ul>
         <p class="takeaway">Unlock new revenue streams quickly.</p>
         <a class="cardlink" href="#contact">Free growth audit &rsaquo;</a>
+        </div>
       </div>
       <div class="card">
+        <img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Customer checking out on an online store with their card">
+        <div class="card-body">
         <h3>DTC &amp; performance marketing</h3>
         <span class="tag">Own your customer</span>
         <ul>
@@ -314,8 +324,11 @@
         </ul>
         <p class="takeaway">Turn traffic into long-term customers.</p>
         <a class="cardlink" href="#contact">Free growth audit &rsaquo;</a>
+        </div>
       </div>
       <div class="card">
+        <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tall warehouse storage aisle">
+        <div class="card-body">
         <h3>3PL fulfilment &amp; warehousing</h3>
         <span class="tag">Scale without friction</span>
         <ul>
@@ -326,6 +339,7 @@
         </ul>
         <p class="takeaway">Integrated warehouse efficiencies.</p>
         <a class="cardlink" href="#contact">Free growth audit &rsaquo;</a>
+        </div>
       </div>
     </div>
   </div>
@@ -449,7 +463,7 @@
       </select>
       <button type="submit" class="btn big">Book your free growth audit</button>
     </form>
-    <p class="alt-mail">Or email <a href="/cdn-cgi/l/email-protection#a2cac7cececde2c7dac3cfd2cec78cc1cdcf"><span class="__cf_email__" data-cfemail="0e666b6262614e6b766f637e626b206d6163">[email&#160;protected]</span></a> directly.</p>
+    <p class="alt-mail">Or email <a href="mailto:hello@example.com">hello@example.com</a> directly.</p>
   </div>
 </section>
 
@@ -467,7 +481,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Reveal on scroll
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
